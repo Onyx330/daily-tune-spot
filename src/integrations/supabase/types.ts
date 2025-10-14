@@ -14,7 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      daily_recommendations: {
+        Row: {
+          album_image_url: string | null
+          album_name: string | null
+          artist_name: string
+          created_at: string
+          id: string
+          preview_url: string | null
+          recommendation_date: string
+          spotify_url: string
+          track_id: string
+          track_name: string
+          user_id: string
+        }
+        Insert: {
+          album_image_url?: string | null
+          album_name?: string | null
+          artist_name: string
+          created_at?: string
+          id?: string
+          preview_url?: string | null
+          recommendation_date?: string
+          spotify_url: string
+          track_id: string
+          track_name: string
+          user_id: string
+        }
+        Update: {
+          album_image_url?: string | null
+          album_name?: string | null
+          artist_name?: string
+          created_at?: string
+          id?: string
+          preview_url?: string | null
+          recommendation_date?: string
+          spotify_url?: string
+          track_id?: string
+          track_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_spotify_tokens: {
+        Row: {
+          access_token: string
+          created_at: string
+          expires_at: string
+          id: string
+          refresh_token: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          access_token: string
+          created_at?: string
+          expires_at: string
+          id?: string
+          refresh_token: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          access_token?: string
+          created_at?: string
+          expires_at?: string
+          id?: string
+          refresh_token?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
