@@ -16,7 +16,7 @@ serve(async (req) => {
 
     const SPOTIFY_CLIENT_ID = Deno.env.get('SPOTIFY_CLIENT_ID');
     const SPOTIFY_CLIENT_SECRET = Deno.env.get('SPOTIFY_CLIENT_SECRET');
-    const REDIRECT_URI = `${Deno.env.get('REDIRECT_URI') || 'https://dailytune.duckdns.org'}/callback`;
+    const REDIRECT_URI = 'https://dailytune.duckdns.org/callback';
 
     if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET) {
       throw new Error('Spotify credentials not configured');
